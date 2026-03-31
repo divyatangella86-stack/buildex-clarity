@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import steelImg from "@/assets/material-steel.jpg";
 import aluminiumImg from "@/assets/material-aluminium.jpg";
@@ -5,10 +6,10 @@ import copperImg from "@/assets/material-copper.jpg";
 import mineralsImg from "@/assets/material-minerals.jpg";
 
 const materials = [
-  { image: steelImg, title: "Steel", desc: "TMT, Structural Steel, HR Sheets", alt: "Steel TMT bars and structural beams in warehouse" },
-  { image: aluminiumImg, title: "Aluminium", desc: "Ingots, Sheets, Coils, Extrusions", alt: "Aluminium coils in industrial facility" },
-  { image: copperImg, title: "Copper", desc: "Cathodes, Rods, Wires, Tubes", alt: "Copper cathodes and rods" },
-  { image: mineralsImg, title: "Minerals", desc: "Iron Ore, Manganese, Limestone", alt: "Iron ore at mining site" },
+  { image: steelImg, title: "Steel", desc: "TMT, Structural Steel, HR Sheets", alt: "Steel TMT bars and structural beams in warehouse", link: "/product/tmt-bars" },
+  { image: aluminiumImg, title: "Aluminium", desc: "Ingots, Sheets, Coils, Extrusions", alt: "Aluminium coils in industrial facility", link: "/product/hr-coils" },
+  { image: copperImg, title: "Copper", desc: "Cathodes, Rods, Wires, Tubes", alt: "Copper cathodes and rods", link: "/product/copper-cathodes" },
+  { image: mineralsImg, title: "Minerals", desc: "Iron Ore, Manganese, Limestone", alt: "Iron ore at mining site", link: "/product/tmt-bars" },
 ];
 
 const MaterialsGrid = () => (
@@ -19,8 +20,8 @@ const MaterialsGrid = () => (
         <p className="text-muted-foreground max-w-lg mx-auto">Sourcing the finest industrial raw materials from verified suppliers across India.</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {materials.map(({ image, title, desc, alt }) => (
-          <div key={title} className="group bg-card rounded-xl border border-border shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden">
+        {materials.map(({ image, title, desc, alt, link }) => (
+          <Link to={link} key={title} className="group bg-card rounded-xl border border-border shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden">
             <div className="h-48 overflow-hidden">
               <img
                 src={image}
@@ -34,11 +35,11 @@ const MaterialsGrid = () => (
             <div className="p-5">
               <h3 className="font-heading font-bold text-lg text-foreground mb-1">{title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{desc}</p>
-              <Button variant="ghost" size="sm" className="text-accent hover:text-accent/80 p-0 h-auto font-semibold">
+              <span className="text-accent font-semibold text-sm">
                 Explore →
-              </Button>
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
