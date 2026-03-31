@@ -20,8 +20,8 @@ const MaterialsGrid = () => (
         <p className="text-muted-foreground max-w-lg mx-auto">Sourcing the finest industrial raw materials from verified suppliers across India.</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {materials.map(({ image, title, desc, alt }) => (
-          <div key={title} className="group bg-card rounded-xl border border-border shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden">
+        {materials.map(({ image, title, desc, alt, link }) => (
+          <Link to={link} key={title} className="group bg-card rounded-xl border border-border shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden">
             <div className="h-48 overflow-hidden">
               <img
                 src={image}
@@ -35,11 +35,11 @@ const MaterialsGrid = () => (
             <div className="p-5">
               <h3 className="font-heading font-bold text-lg text-foreground mb-1">{title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{desc}</p>
-              <Button variant="ghost" size="sm" className="text-accent hover:text-accent/80 p-0 h-auto font-semibold">
+              <span className="text-accent font-semibold text-sm">
                 Explore →
-              </Button>
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
