@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import steelImg from "@/assets/material-steel.jpg";
 import aluminiumImg from "@/assets/material-aluminium.jpg";
@@ -5,10 +6,10 @@ import copperImg from "@/assets/material-copper.jpg";
 import mineralsImg from "@/assets/material-minerals.jpg";
 
 const materials = [
-  { image: steelImg, title: "Steel", desc: "TMT, Structural Steel, HR Sheets", alt: "Steel TMT bars and structural beams in warehouse" },
-  { image: aluminiumImg, title: "Aluminium", desc: "Ingots, Sheets, Coils, Extrusions", alt: "Aluminium coils in industrial facility" },
-  { image: copperImg, title: "Copper", desc: "Cathodes, Rods, Wires, Tubes", alt: "Copper cathodes and rods" },
-  { image: mineralsImg, title: "Minerals", desc: "Iron Ore, Manganese, Limestone", alt: "Iron ore at mining site" },
+  { image: steelImg, title: "Steel", desc: "TMT, Structural Steel, HR Sheets", alt: "Steel TMT bars and structural beams in warehouse", link: "/product/tmt-bars" },
+  { image: aluminiumImg, title: "Aluminium", desc: "Ingots, Sheets, Coils, Extrusions", alt: "Aluminium coils in industrial facility", link: "/product/hr-coils" },
+  { image: copperImg, title: "Copper", desc: "Cathodes, Rods, Wires, Tubes", alt: "Copper cathodes and rods", link: "/product/copper-cathodes" },
+  { image: mineralsImg, title: "Minerals", desc: "Iron Ore, Manganese, Limestone", alt: "Iron ore at mining site", link: "/product/tmt-bars" },
 ];
 
 const MaterialsGrid = () => (
