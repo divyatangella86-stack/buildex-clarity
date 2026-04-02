@@ -163,9 +163,17 @@ const Header = () => {
                 <div className="col-span-2">
                   <h4 className="font-heading font-bold text-sm text-foreground mb-3">Market Insights</h4>
                   <div className="grid grid-cols-2 gap-2">
-                    {insightsMenu.items.map((item) => (
-                      <a key={item} href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors py-1">{item}</a>
-                    ))}
+                    {insightsMenu.items.map((item) => {
+                      const linkMap: Record<string, string> = {
+                        "Daily Metal Prices": "/daily-metal-prices",
+                        "Steel Price Trends": "/steel-price-trends",
+                        "Commodity Reports": "/commodity-reports",
+                        "Industry News": "/industry-news",
+                      };
+                      return (
+                        <a key={item} href={linkMap[item] || "#"} className="text-sm text-muted-foreground hover:text-accent transition-colors py-1">{item}</a>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="col-span-2 bg-muted rounded-lg p-5">
