@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Product from "./pages/Product.tsx";
+import DailyMetalPrices from "./pages/DailyMetalPrices.tsx";
+import SteelPriceTrends from "./pages/SteelPriceTrends.tsx";
+import CommodityReports from "./pages/CommodityReports.tsx";
+import IndustryNews from "./pages/IndustryNews.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
