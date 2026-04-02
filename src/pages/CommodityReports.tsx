@@ -105,7 +105,7 @@ const CommodityReports = () => (
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-medium text-accent bg-accent/10 px-2.5 py-1 rounded-full">{r.category}</span>
                   {r.premium && (
-                    <span className="flex items-center gap-1 text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
+                    <span className="flex items-center gap-1 text-xs font-medium text-foreground bg-muted px-2 py-1 rounded-full">
                       <Star className="h-3 w-3" /> Premium
                     </span>
                   )}
