@@ -9,6 +9,7 @@ import DailyMetalPrices from "./pages/DailyMetalPrices.tsx";
 import SteelPriceTrends from "./pages/SteelPriceTrends.tsx";
 import CommodityReports from "./pages/CommodityReports.tsx";
 import IndustryNews from "./pages/IndustryNews.tsx";
+import About from "./pages/About.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/steel-price-trends" element={<SteelPriceTrends />} />
           <Route path="/commodity-reports" element={<CommodityReports />} />
           <Route path="/industry-news" element={<IndustryNews />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

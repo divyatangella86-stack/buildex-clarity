@@ -65,10 +65,16 @@ const Header = () => {
               onMouseEnter={() => handleEnter(item)}
               onMouseLeave={handleLeave}
             >
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md">
-                {item}
-                {item !== "About" && <ChevronDown className="h-3.5 w-3.5" />}
-              </button>
+              {item === "About" ? (
+                <a href="/about" className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md">
+                  {item}
+                </a>
+              ) : (
+                <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md">
+                  {item}
+                  <ChevronDown className="h-3.5 w-3.5" />
+                </button>
+              )}
             </div>
           ))}
         </nav>
