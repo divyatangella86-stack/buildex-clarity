@@ -4,6 +4,7 @@ import { MapPin, TrendingUp, TrendingDown, Minus, Clock, ChevronRight, Shield, T
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import type { ProductData } from "@/data/products";
+import ProductNewsSection from "@/components/ProductNewsSection";
 
 interface ProductPageProps {
   product: ProductData;
@@ -182,6 +183,9 @@ const ProductPage = ({ product }: ProductPageProps) => {
                 ))}
               </div>
             </div>
+
+            {/* Latest News */}
+            <ProductNewsSection productName={product.name} />
 
             {/* Can't find */}
             <div className="bg-muted rounded-xl p-5 text-center">
