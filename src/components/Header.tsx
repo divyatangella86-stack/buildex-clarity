@@ -70,10 +70,10 @@ const Header = () => {
                   {item}
                 </a>
               ) : (
-                <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md">
+                <a href={item === "Materials" ? "/materials" : item === "Industries" ? "/industries" : item === "Solutions" ? "/solutions" : item === "Market Insights" ? "/market-insights" : "#"} className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md">
                   {item}
                   <ChevronDown className="h-3.5 w-3.5" />
-                </button>
+                </a>
               )}
             </div>
           ))}
