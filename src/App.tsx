@@ -10,6 +10,10 @@ import SteelPriceTrends from "./pages/SteelPriceTrends.tsx";
 import CommodityReports from "./pages/CommodityReports.tsx";
 import IndustryNews from "./pages/IndustryNews.tsx";
 import About from "./pages/About.tsx";
+import Materials from "./pages/Materials.tsx";
+import Industries from "./pages/Industries.tsx";
+import Solutions from "./pages/Solutions.tsx";
+import MarketInsightsHub from "./pages/MarketInsightsHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -27,6 +31,10 @@ const App = () => (
           <Route path="/steel-price-trends" element={<SteelPriceTrends />} />
           <Route path="/commodity-reports" element={<CommodityReports />} />
           <Route path="/industry-news" element={<IndustryNews />} />
+          <Route path="/materials" element={<Materials />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/market-insights" element={<MarketInsightsHub />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
