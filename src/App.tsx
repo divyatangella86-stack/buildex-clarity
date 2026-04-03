@@ -27,6 +27,7 @@ const App = () => (
           <Route path="/steel-price-trends" element={<SteelPriceTrends />} />
           <Route path="/commodity-reports" element={<CommodityReports />} />
           <Route path="/industry-news" element={<IndustryNews />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
