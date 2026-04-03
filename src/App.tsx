@@ -10,6 +10,10 @@ import SteelPriceTrends from "./pages/SteelPriceTrends.tsx";
 import CommodityReports from "./pages/CommodityReports.tsx";
 import IndustryNews from "./pages/IndustryNews.tsx";
 import About from "./pages/About.tsx";
+import Materials from "./pages/Materials.tsx";
+import Industries from "./pages/Industries.tsx";
+import Solutions from "./pages/Solutions.tsx";
+import MarketInsightsHub from "./pages/MarketInsightsHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
