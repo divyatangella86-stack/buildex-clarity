@@ -184,6 +184,9 @@ const ProductPage = ({ product }: ProductPageProps) => {
               </div>
             </div>
 
+            {/* Latest News */}
+            <ProductNewsSection productName={product.name} />
+
             {/* Can't find */}
             <div className="bg-muted rounded-xl p-5 text-center">
               <p className="text-sm text-muted-foreground mb-2">Can't find what you are looking for?</p>
