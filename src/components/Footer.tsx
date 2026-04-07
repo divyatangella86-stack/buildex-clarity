@@ -118,9 +118,9 @@ const Footer = () => (
           © 2026 HeyBuildex. All rights reserved.
         </p>
         <div className="flex items-center gap-6 text-xs text-primary-foreground/30">
-          <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
-          <a href="#" className="hover:text-accent transition-colors">Refund Policy</a>
+          <a href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</a>
+          <a href="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</a>
+          <a href="/refund-policy" className="hover:text-accent transition-colors">Refund Policy</a>
         </div>
       </div>
     </div>
