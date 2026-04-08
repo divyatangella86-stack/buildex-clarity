@@ -1,17 +1,42 @@
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import menuSteel from "@/assets/menu-steel.jpg";
+import menuAluminium from "@/assets/menu-aluminium.jpg";
+import menuCopper from "@/assets/menu-copper.jpg";
 
-const materialsMenu = {
-  categories: [
-    { title: "Steel", items: ["TMT Bars", "Structural Steel", "HR Sheets & Plates", "CR Sheets", "GI Products", "Steel Pipes & Tubes"] },
-    { title: "Aluminium", items: ["Aluminium Ingots", "Aluminium Sheets", "Aluminium Coils", "Aluminium Extrusions"] },
-    { title: "Copper", items: ["Copper Cathodes", "Copper Rods", "Copper Wires", "Copper Tubes"] },
-    { title: "Minerals", items: ["Iron Ore", "Manganese Ore", "Limestone", "Bauxite"] },
-  ],
-  featured: ["Bulk Steel Procurement", "Industrial Metal Supply", "Nationwide Logistics"],
-  cta: "Request Bulk Quote",
+type MaterialKey = "Steel" | "Aluminium" | "Copper";
+
+const materialsMenu: Record<MaterialKey, { image: string; subcategories: { title: string; items: string[] }[] }> = {
+  Steel: {
+    image: menuSteel,
+    subcategories: [
+      { title: "Long Products", items: ["TMT Bars", "Round Bars", "Binding Wire"] },
+      { title: "Flat Products", items: ["HR Sheets & Plates", "CR Sheets", "Chequered Plates"] },
+      { title: "Structural Sections", items: ["MS Beam", "MS Channel", "MS Angle", "MS Flat"] },
+      { title: "Pipes & Tubes", items: ["Round Pipe", "Square Pipe", "Rectangular Pipe"] },
+      { title: "Coated Steel", items: ["GI Products", "Roofing Sheets"] },
+    ],
+  },
+  Aluminium: {
+    image: menuAluminium,
+    subcategories: [
+      { title: "Primary Products", items: ["Aluminium Ingots", "Aluminium Billets"] },
+      { title: "Flat Products", items: ["Aluminium Sheets", "Aluminium Coils", "Aluminium Foil"] },
+      { title: "Extrusions", items: ["Aluminium Extrusions", "Aluminium Profiles", "Aluminium Channels"] },
+    ],
+  },
+  Copper: {
+    image: menuCopper,
+    subcategories: [
+      { title: "Primary Products", items: ["Copper Cathodes", "Copper Ingots"] },
+      { title: "Semi-Finished", items: ["Copper Rods", "Copper Wires", "Copper Tubes"] },
+      { title: "Finished Products", items: ["Copper Strips", "Copper Busbars"] },
+    ],
+  },
 };
+
+const materialKeys: MaterialKey[] = ["Steel", "Aluminium", "Copper"];
 
 const industriesMenu = {
   items: ["Construction", "Infrastructure", "Manufacturing", "Energy & Power", "Automobile", "Engineering & Fabrication"],
@@ -35,12 +60,14 @@ const navItems = ["Materials", "Industries", "Solutions", "Market Insights", "Ab
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [activeMaterial, setActiveMaterial] = useState<MaterialKey>("Steel");
   const [mobileOpen, setMobileOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleEnter = (item: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setActiveMenu(item);
+    if (item === "Materials") setActiveMaterial("Steel");
   };
 
   const handleLeave = () => {
@@ -48,6 +75,8 @@ const Header = () => {
   };
 
   useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); }, []);
+
+  const currentMaterial = materialsMenu[activeMaterial];
 
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
@@ -97,31 +126,60 @@ const Header = () => {
           onMouseLeave={handleLeave}
         >
           <div className="container-max px-8 py-8">
+
+            {/* ── Materials Mega Menu ── */}
             {activeMenu === "Materials" && (
-              <div className="grid grid-cols-5 gap-8">
-                {materialsMenu.categories.map((cat) => (
-                  <div key={cat.title}>
-                    <h4 className="font-heading font-bold text-sm text-foreground mb-3">{cat.title}</h4>
-                    <ul className="space-y-2">
-                      {cat.items.map((item) => (
-                        <li key={item}>
-                          <a href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">{item}</a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-                <div className="bg-muted rounded-lg p-5">
-                  <h4 className="font-heading font-bold text-sm text-foreground mb-3">Featured</h4>
-                  <ul className="space-y-2 mb-4">
-                    {materialsMenu.featured.map((f) => (
-                      <li key={f} className="text-sm text-muted-foreground">• {f}</li>
+              <div className="flex gap-0">
+                {/* Left: Material tabs with images */}
+                <div className="w-52 border-r border-border pr-4 space-y-1 shrink-0">
+                  {materialKeys.map((key) => (
+                    <button
+                      key={key}
+                      onMouseEnter={() => setActiveMaterial(key)}
+                      className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-sm font-semibold transition-all ${
+                        activeMaterial === key
+                          ? "bg-accent/10 text-accent"
+                          : "text-foreground/70 hover:bg-muted hover:text-foreground"
+                      }`}
+                    >
+                      <img
+                        src={materialsMenu[key].image}
+                        alt={key}
+                        className="w-9 h-9 rounded-md object-cover"
+                        width={36}
+                        height={36}
+                      />
+                      {key}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Right: Subcategories grid */}
+                <div className="flex-1 pl-8">
+                  <h4 className="font-heading font-bold text-base text-foreground mb-4 flex items-center gap-2">
+                    🔩 {activeMaterial} Products
+                  </h4>
+                  <div className="grid grid-cols-3 gap-x-8 gap-y-4">
+                    {currentMaterial.subcategories.map((sub) => (
+                      <div key={sub.title}>
+                        <h5 className="text-xs font-bold text-foreground/50 uppercase tracking-wider mb-2">{sub.title}</h5>
+                        <ul className="space-y-1.5">
+                          {sub.items.map((item) => (
+                            <li key={item}>
+                              <a href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">
+                                {item}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
-                  <Button variant="accent" size="sm" className="w-full">{materialsMenu.cta}</Button>
+                  </div>
                 </div>
               </div>
             )}
+
+            {/* ── Industries ── */}
             {activeMenu === "Industries" && (
               <div className="grid grid-cols-4 gap-8">
                 <div className="col-span-2">
@@ -143,6 +201,8 @@ const Header = () => {
                 </div>
               </div>
             )}
+
+            {/* ── Solutions ── */}
             {activeMenu === "Solutions" && (
               <div className="grid grid-cols-4 gap-8">
                 <div className="col-span-2">
@@ -164,6 +224,8 @@ const Header = () => {
                 </div>
               </div>
             )}
+
+            {/* ── Market Insights ── */}
             {activeMenu === "Market Insights" && (
               <div className="grid grid-cols-4 gap-8">
                 <div className="col-span-2">
@@ -201,7 +263,7 @@ const Header = () => {
       {mobileOpen && (
         <div className="lg:hidden bg-card border-b border-border px-4 py-6 space-y-4">
           {navItems.map((item) => (
-            <a key={item} href="#" className="block text-sm font-medium text-foreground/80 py-2">{item}</a>
+            <a key={item} href={item === "Materials" ? "/materials" : item === "Industries" ? "/industries" : item === "Solutions" ? "/solutions" : item === "Market Insights" ? "/market-insights" : item === "About" ? "/about" : "#"} className="block text-sm font-medium text-foreground/80 py-2">{item}</a>
           ))}
           <Button variant="accent" className="w-full">Get Quote</Button>
         </div>
