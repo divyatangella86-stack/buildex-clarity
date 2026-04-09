@@ -13,6 +13,7 @@ const industries = [
   {
     image: indConstruction,
     title: "Construction",
+    slug: "/industries/construction",
     description: "TMT bars, structural steel, cement-grade minerals — everything builders need. We serve residential, commercial, and mega-project developers with guaranteed quality and on-time delivery.",
     materials: ["TMT Bars", "Structural Steel", "HR Plates", "Iron Ore"],
   },
