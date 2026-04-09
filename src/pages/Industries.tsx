@@ -27,6 +27,7 @@ const industries = [
   {
     image: indEnergy,
     title: "Energy & Power",
+    slug: "/industries/energy-power",
     description: "Copper conductors, aluminium cables, steel structures for transmission towers, and specialty alloys for power generation equipment.",
     materials: ["Copper Rods", "Aluminium Extrusions", "Structural Steel", "GI Pipes"],
   },
