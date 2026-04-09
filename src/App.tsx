@@ -12,6 +12,12 @@ import IndustryNews from "./pages/IndustryNews.tsx";
 import About from "./pages/About.tsx";
 import Materials from "./pages/Materials.tsx";
 import Industries from "./pages/Industries.tsx";
+import IndustryConstruction from "./pages/IndustryConstruction.tsx";
+import IndustryManufacturing from "./pages/IndustryManufacturing.tsx";
+import IndustryEnergy from "./pages/IndustryEnergy.tsx";
+import IndustryInfrastructure from "./pages/IndustryInfrastructure.tsx";
+import IndustryAutomobile from "./pages/IndustryAutomobile.tsx";
+import IndustryEngineering from "./pages/IndustryEngineering.tsx";
 import Solutions from "./pages/Solutions.tsx";
 import MarketInsightsHub from "./pages/MarketInsightsHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -36,6 +42,12 @@ const App = () => (
           <Route path="/industry-news" element={<IndustryNews />} />
           <Route path="/materials" element={<Materials />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/construction" element={<IndustryConstruction />} />
+          <Route path="/industries/manufacturing" element={<IndustryManufacturing />} />
+          <Route path="/industries/energy-power" element={<IndustryEnergy />} />
+          <Route path="/industries/infrastructure" element={<IndustryInfrastructure />} />
+          <Route path="/industries/automobile" element={<IndustryAutomobile />} />
+          <Route path="/industries/engineering-fabrication" element={<IndustryEngineering />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/market-insights" element={<MarketInsightsHub />} />
           <Route path="/about" element={<About />} />

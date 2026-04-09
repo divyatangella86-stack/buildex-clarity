@@ -13,36 +13,42 @@ const industries = [
   {
     image: indConstruction,
     title: "Construction",
+    slug: "/industries/construction",
     description: "TMT bars, structural steel, cement-grade minerals — everything builders need. We serve residential, commercial, and mega-project developers with guaranteed quality and on-time delivery.",
     materials: ["TMT Bars", "Structural Steel", "HR Plates", "Iron Ore"],
   },
   {
     image: indManufacturing,
     title: "Manufacturing",
+    slug: "/industries/manufacturing",
     description: "Flat steel products, aluminium sheets, and copper components for OEMs and contract manufacturers. Mill-direct sourcing ensures competitive pricing at scale.",
     materials: ["HR/CR Coils", "Aluminium Sheets", "Copper Strips", "GI Products"],
   },
   {
     image: indEnergy,
     title: "Energy & Power",
+    slug: "/industries/energy-power",
     description: "Copper conductors, aluminium cables, steel structures for transmission towers, and specialty alloys for power generation equipment.",
     materials: ["Copper Rods", "Aluminium Extrusions", "Structural Steel", "GI Pipes"],
   },
   {
     image: indInfrastructure,
     title: "Infrastructure",
+    slug: "/industries/infrastructure",
     description: "Bulk steel and mineral supply for highways, bridges, metros, and ports. We handle large-volume orders with multi-site delivery coordination.",
     materials: ["TMT Bars", "HR Plates", "Iron Ore", "Limestone"],
   },
   {
     image: indAutomobile,
     title: "Automobile",
+    slug: "/industries/automobile",
     description: "Precision-grade flat steel, aluminium alloys, and copper components for automotive OEMs, tier-1 suppliers, and EV manufacturers.",
     materials: ["CR Coils", "Aluminium Coils", "Copper Wires", "HR Sheets"],
   },
   {
     image: indEngineering,
     title: "Engineering & Fabrication",
+    slug: "/industries/engineering-fabrication",
     description: "Versatile steel sections, pipes, plates, and non-ferrous metals for custom fabrication, structural engineering, and heavy equipment manufacturing.",
     materials: ["Steel Pipes & Tubes", "HR/CR Sheets", "Copper Tubes", "Aluminium Ingots"],
   },
@@ -91,9 +97,11 @@ const Industries = () => (
                     <span key={m} className="px-2.5 py-1 rounded-full bg-muted text-xs font-medium text-muted-foreground">{m}</span>
                   ))}
                 </div>
-                <Button variant="ghost" className="text-accent p-0 h-auto font-semibold group/btn">
-                  Learn More <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <a href={ind.slug}>
+                  <Button variant="ghost" className="text-accent p-0 h-auto font-semibold group/btn">
+                    Learn More <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </div>
             </div>
           ))}
