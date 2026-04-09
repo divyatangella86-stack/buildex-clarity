@@ -97,9 +97,11 @@ const Industries = () => (
                     <span key={m} className="px-2.5 py-1 rounded-full bg-muted text-xs font-medium text-muted-foreground">{m}</span>
                   ))}
                 </div>
-                <Button variant="ghost" className="text-accent p-0 h-auto font-semibold group/btn">
-                  Learn More <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <a href={ind.slug}>
+                  <Button variant="ghost" className="text-accent p-0 h-auto font-semibold group/btn">
+                    Learn More <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </div>
             </div>
           ))}

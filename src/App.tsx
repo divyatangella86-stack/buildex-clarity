@@ -42,6 +42,12 @@ const App = () => (
           <Route path="/industry-news" element={<IndustryNews />} />
           <Route path="/materials" element={<Materials />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/construction" element={<IndustryConstruction />} />
+          <Route path="/industries/manufacturing" element={<IndustryManufacturing />} />
+          <Route path="/industries/energy-power" element={<IndustryEnergy />} />
+          <Route path="/industries/infrastructure" element={<IndustryInfrastructure />} />
+          <Route path="/industries/automobile" element={<IndustryAutomobile />} />
+          <Route path="/industries/engineering-fabrication" element={<IndustryEngineering />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/market-insights" element={<MarketInsightsHub />} />
           <Route path="/about" element={<About />} />
