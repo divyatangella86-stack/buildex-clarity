@@ -34,6 +34,7 @@ const industries = [
   {
     image: indInfrastructure,
     title: "Infrastructure",
+    slug: "/industries/infrastructure",
     description: "Bulk steel and mineral supply for highways, bridges, metros, and ports. We handle large-volume orders with multi-site delivery coordination.",
     materials: ["TMT Bars", "HR Plates", "Iron Ore", "Limestone"],
   },
