@@ -20,6 +20,7 @@ const industries = [
   {
     image: indManufacturing,
     title: "Manufacturing",
+    slug: "/industries/manufacturing",
     description: "Flat steel products, aluminium sheets, and copper components for OEMs and contract manufacturers. Mill-direct sourcing ensures competitive pricing at scale.",
     materials: ["HR/CR Coils", "Aluminium Sheets", "Copper Strips", "GI Products"],
   },
