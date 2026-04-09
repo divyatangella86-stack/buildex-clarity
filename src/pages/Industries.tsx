@@ -48,6 +48,7 @@ const industries = [
   {
     image: indEngineering,
     title: "Engineering & Fabrication",
+    slug: "/industries/engineering-fabrication",
     description: "Versatile steel sections, pipes, plates, and non-ferrous metals for custom fabrication, structural engineering, and heavy equipment manufacturing.",
     materials: ["Steel Pipes & Tubes", "HR/CR Sheets", "Copper Tubes", "Aluminium Ingots"],
   },
