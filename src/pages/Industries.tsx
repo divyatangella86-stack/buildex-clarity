@@ -41,6 +41,7 @@ const industries = [
   {
     image: indAutomobile,
     title: "Automobile",
+    slug: "/industries/automobile",
     description: "Precision-grade flat steel, aluminium alloys, and copper components for automotive OEMs, tier-1 suppliers, and EV manufacturers.",
     materials: ["CR Coils", "Aluminium Coils", "Copper Wires", "HR Sheets"],
   },
