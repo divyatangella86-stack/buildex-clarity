@@ -109,7 +109,9 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button variant="accent" size="default">Get Quote</Button>
+          <Button variant="accent" size="default" asChild>
+            <a href="/get-quote">Get Quote</a>
+          </Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -265,7 +267,9 @@ const Header = () => {
           {navItems.map((item) => (
             <a key={item} href={item === "Materials" ? "/materials" : item === "Industries" ? "/industries" : item === "Solutions" ? "/solutions" : item === "Market Insights" ? "/market-insights" : item === "About" ? "/about" : "#"} className="block text-sm font-medium text-foreground/80 py-2">{item}</a>
           ))}
-          <Button variant="accent" className="w-full">Get Quote</Button>
+          <Button variant="accent" className="w-full" asChild>
+            <a href="/get-quote">Get Quote</a>
+          </Button>
         </div>
       )}
     </header>
