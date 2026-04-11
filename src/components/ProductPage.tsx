@@ -43,10 +43,24 @@ const ProductPage = ({ product }: ProductPageProps) => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column — Product Info */}
           <div className="lg:col-span-2 space-y-6">
+            {/* Product Hero Image */}
+            {product.heroImage && (
+              <div className="rounded-xl overflow-hidden border border-border shadow-card">
+                <img
+                  src={product.heroImage}
+                  alt={product.name}
+                  className="w-full h-48 sm:h-64 lg:h-72 object-cover"
+                  width={800}
+                  height={512}
+                />
+              </div>
+            )}
+
             {/* Product Header */}
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <span className="bg-accent/10 text-accent text-xs font-semibold px-2.5 py-1 rounded-full">{product.category}</span>
+                <span className="bg-muted text-muted-foreground text-xs px-2.5 py-1 rounded-full">{product.subcategory}</span>
                 <span className="bg-muted text-muted-foreground text-xs px-2.5 py-1 rounded-full">Pan India Delivery</span>
               </div>
               <h1 className="font-heading text-2xl lg:text-3xl font-extrabold text-foreground mb-3">
