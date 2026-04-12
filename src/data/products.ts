@@ -15,6 +15,10 @@ import productSquarePipe from "@/assets/product-square-pipe.jpg";
 import productRectangularPipe from "@/assets/product-rectangular-pipe.jpg";
 import productGiProducts from "@/assets/product-gi-products.jpg";
 import productRoofingSheets from "@/assets/product-roofing-sheets.jpg";
+import productAluminiumIngots from "@/assets/product-aluminium-ingots.jpg";
+import productAluminiumCoils from "@/assets/product-aluminium-coils.jpg";
+import productAluminiumSheets from "@/assets/product-aluminium-sheets.jpg";
+import productAluminiumExtrusions from "@/assets/product-aluminium-extrusions.jpg";
 
 export interface ProductSubCategory {
   name: string;
