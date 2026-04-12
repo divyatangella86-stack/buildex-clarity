@@ -788,6 +788,7 @@ export const products: ProductData[] = [
       "Sourced from Hindalco, Jindal & premium extruders",
     ],
   },
+];
 
 export function getProductBySlug(slug: string): ProductData | undefined {
   return products.find((p) => p.slug === slug);
