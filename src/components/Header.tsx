@@ -29,9 +29,9 @@ const materialsMenu: Record<MaterialKey, { image: string; subcategories: { title
   Copper: {
     image: menuCopper,
     subcategories: [
-      { title: "Primary Products", items: ["Copper Cathodes", "Copper Ingots"] },
-      { title: "Semi-Finished", items: ["Copper Rods", "Copper Wires", "Copper Tubes"] },
-      { title: "Finished Products", items: ["Copper Strips", "Copper Busbars"] },
+      { title: "Primary Products", items: [{ name: "Copper Cathodes", link: "/product/copper-cathodes" }] },
+      { title: "Semi-Finished", items: [{ name: "Copper Rods", link: "/product/copper-cathodes" }, { name: "Copper Wires", link: "/product/copper-cathodes" }, { name: "Copper Tubes", link: "/product/copper-cathodes" }] },
+      { title: "Finished Products", items: [{ name: "Copper Strips", link: "/product/copper-cathodes" }, { name: "Copper Busbars", link: "/product/copper-cathodes" }] },
     ],
   },
 };
