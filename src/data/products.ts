@@ -642,7 +642,152 @@ export const products: ProductData[] = [
       "Competitive pricing for bulk orders",
     ],
   },
-];
+
+  // ─── ALUMINIUM ────────────────────────────────────────
+  {
+    slug: "aluminium-ingots",
+    name: "Aluminium Ingots",
+    category: "Aluminium",
+    subcategory: "Primary Aluminium",
+    description:
+      "Aluminium Ingots are primary aluminium products with 99.7% purity, produced through the smelting of alumina. They serve as the base raw material for casting, extrusion, and rolling industries across automotive, construction, and packaging sectors.",
+    fullDescription:
+      "Aluminium Ingots are foundational metal products manufactured through the Hall-Héroult electrolytic smelting process. Available in standard P1020A grade (99.7% purity) and high-purity grades up to 99.97%, these ingots are the starting point for virtually all aluminium semi-finished and finished products. They are remelted and cast into billets, slabs, wire rods, and alloy ingots for downstream manufacturing. Key applications include automotive components (engine blocks, wheels), construction materials (window frames, curtain walls), electrical conductors, and packaging (foil, cans). Sourced from Hindalco, Vedanta (BALCO), Nalco, and international smelters. Conform to IS 617:1994 and LME specifications.",
+    heroImage: productAluminiumIngots,
+    grade: "P1020A (99.7%)",
+    dimension: "Standard 22.5 kg / 7 kg",
+    subCategories: [
+      { name: "Primary Ingots", slug: "primary-ingots" },
+      { name: "Alloy Ingots", slug: "alloy-ingots" },
+      { name: "T-Bars", slug: "t-bars" },
+      { name: "Sows", slug: "sows" },
+    ],
+    locations: [
+      { name: "Mumbai", price: "₹2,18,000/MT", change: "+1.5%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Delhi", price: "₹2,20,000/MT", change: "+1.2%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Chennai", price: "₹2,17,500/MT", change: "+0.8%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Kolkata", price: "₹2,16,000/MT", change: "+0.5%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Ahmedabad", price: "₹2,19,000/MT", change: "+1.0%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Silvassa", price: "₹2,17,000/MT", change: "+0.6%", changeType: "up", updatedAgo: "3 days ago" },
+    ],
+    avgLastMonth: "₹2,14,500",
+    features: [
+      "99.7% purity (P1020A grade)",
+      "IS 617:1994 & LME certified",
+      "Sourced from Hindalco, Nalco, BALCO",
+      "Available in 7 kg and 22.5 kg ingots",
+      "Ideal for casting & remelting",
+      "Competitive bulk pricing with credit options",
+    ],
+  },
+  {
+    slug: "aluminium-coils",
+    name: "Aluminium Coils",
+    category: "Aluminium",
+    subcategory: "Flat Rolled Products",
+    description:
+      "Aluminium Coils are flat-rolled aluminium products available in various alloys and tempers. Used extensively in roofing, cladding, automotive body panels, heat exchangers, and packaging industries for their lightweight and corrosion-resistant properties.",
+    fullDescription:
+      "Aluminium Coils are manufactured by hot rolling and cold rolling aluminium slabs into thin, continuous strips wound into coils. Available in a wide range of alloys (1xxx, 3xxx, 5xxx, 8xxx series) and tempers (O, H14, H24, H32), they offer excellent formability, corrosion resistance, and surface finish. Thickness ranges from 0.2mm to 6mm with widths up to 2000mm. Widely used in building cladding and roofing, automotive panels, heat exchanger fins, insulation jacketing, lithographic printing, and flexible packaging. Available in mill finish, coated (PE/PVDF), and embossed finishes. Sourced from Hindalco, Jindal Aluminium, and imports conforming to IS 737:2008 and ASTM B209.",
+    heroImage: productAluminiumCoils,
+    grade: "1100 / 3003 / 5052",
+    dimension: "0.2mm to 6mm",
+    subCategories: [
+      { name: "Plain Coils", slug: "plain-coils" },
+      { name: "Colour Coated Coils", slug: "colour-coated-coils" },
+      { name: "Embossed Coils", slug: "embossed-coils" },
+      { name: "Insulation Coils", slug: "insulation-coils" },
+    ],
+    locations: [
+      { name: "Mumbai", price: "₹2,35,000/MT", change: "+1.8%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Delhi", price: "₹2,37,000/MT", change: "+1.5%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Ahmedabad", price: "₹2,34,000/MT", change: "+1.0%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Bangalore", price: "₹2,36,500/MT", change: "+1.3%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Pune", price: "₹2,35,500/MT", change: "+0.8%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Hyderabad", price: "₹2,34,500/MT", change: "+0.6%", changeType: "up", updatedAgo: "3 days ago" },
+    ],
+    avgLastMonth: "₹2,30,000",
+    features: [
+      "Multiple alloy options (1xxx–8xxx series)",
+      "IS 737:2008 & ASTM B209 certified",
+      "Thickness range 0.2mm to 6mm",
+      "Mill finish, coated & embossed options",
+      "Lightweight with excellent corrosion resistance",
+      "Sourced from Hindalco & Jindal Aluminium",
+    ],
+  },
+  {
+    slug: "aluminium-sheets",
+    name: "Aluminium Sheets",
+    category: "Aluminium",
+    subcategory: "Flat Rolled Products",
+    description:
+      "Aluminium Sheets are flat-cut products from aluminium coils, offering excellent strength-to-weight ratio, corrosion resistance, and workability. Widely used in construction facades, signage, automotive panels, marine applications, and general fabrication.",
+    fullDescription:
+      "Aluminium Sheets are precision-cut flat products derived from aluminium coils through shearing or levelling operations. Available in alloys 1100, 1050, 3003, 5052, 5083, and 6061, each offering specific properties suited to different applications. The 1xxx series provides excellent formability and conductivity, 3xxx offers good corrosion resistance, 5xxx delivers high strength for marine and structural use, and 6xxx provides heat-treatable properties for structural applications. Thickness ranges from 0.3mm to 25mm in standard sizes of 1220×2440mm, 1250×2500mm, and 1500×3000mm. Applications span construction cladding, signage, vehicle bodies, marine vessels, food processing equipment, and decorative panels. Conforms to IS 737:2008, ASTM B209, and EN 573-3.",
+    heroImage: productAluminiumSheets,
+    grade: "1050 / 5052 / 6061",
+    dimension: "0.3mm to 25mm",
+    subCategories: [
+      { name: "Plain Sheets", slug: "plain-sheets" },
+      { name: "Chequered Sheets", slug: "chequered-sheets" },
+      { name: "Perforated Sheets", slug: "perforated-sheets" },
+      { name: "Anodized Sheets", slug: "anodized-sheets" },
+    ],
+    locations: [
+      { name: "Mumbai", price: "₹2,42,000/MT", change: "+1.2%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Delhi", price: "₹2,44,000/MT", change: "+1.5%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Bangalore", price: "₹2,43,000/MT", change: "+1.0%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Chennai", price: "₹2,41,500/MT", change: "+0.8%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Pune", price: "₹2,42,500/MT", change: "+0.6%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Ahmedabad", price: "₹2,41,000/MT", change: "+0.5%", changeType: "up", updatedAgo: "3 days ago" },
+    ],
+    avgLastMonth: "₹2,38,000",
+    features: [
+      "Multiple alloy & temper options",
+      "IS 737 & ASTM B209 certified",
+      "Excellent strength-to-weight ratio",
+      "Available in plain, chequered & perforated",
+      "Custom cutting available",
+      "Sourced from Hindalco, Jindal & imports",
+    ],
+  },
+  {
+    slug: "aluminium-extrusions",
+    name: "Aluminium Extrusions",
+    category: "Aluminium",
+    subcategory: "Extruded Products",
+    description:
+      "Aluminium Extrusions are profiles created by pushing heated aluminium billets through shaped dies, producing complex cross-sections. Used extensively in construction (windows, doors, curtain walls), automotive, solar frames, and industrial applications.",
+    fullDescription:
+      "Aluminium Extrusions are manufactured by heating aluminium billets to approximately 450°C and forcing them through precision-engineered steel dies under high pressure. This process creates profiles with complex cross-sectional shapes that would be impossible or uneconomical to achieve through other manufacturing methods. Available in alloys 6063 (architectural), 6061 (structural), and 6082 (heavy-duty), extrusions are produced in mill finish, anodized, and powder-coated finishes. Standard profiles include angles, channels, T-sections, H-sections, round tubes, square tubes, and rectangular tubes. Custom profiles can be designed for specific applications. Widely used in building facades, window and door systems, solar panel mounting structures, industrial automation frames, heat sinks, and transportation. Conforms to IS 733:1983, IS 1285:2002, and ASTM B221.",
+    heroImage: productAluminiumExtrusions,
+    grade: "6063 T5/T6 / 6061 T6",
+    dimension: "Custom profiles",
+    subCategories: [
+      { name: "Standard Sections", slug: "standard-sections" },
+      { name: "Architectural Profiles", slug: "architectural-profiles" },
+      { name: "Industrial Profiles", slug: "industrial-profiles" },
+      { name: "Solar Frames", slug: "solar-frames" },
+    ],
+    locations: [
+      { name: "Mumbai", price: "₹2,55,000/MT", change: "+1.0%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Delhi", price: "₹2,57,000/MT", change: "+1.2%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Bangalore", price: "₹2,56,000/MT", change: "+0.8%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Hyderabad", price: "₹2,54,500/MT", change: "+0.5%", changeType: "up", updatedAgo: "2 days ago" },
+      { name: "Ahmedabad", price: "₹2,55,500/MT", change: "+0.7%", changeType: "up", updatedAgo: "1 day ago" },
+      { name: "Chennai", price: "₹2,54,000/MT", change: "+0.4%", changeType: "up", updatedAgo: "3 days ago" },
+    ],
+    avgLastMonth: "₹2,50,000",
+    features: [
+      "Custom & standard profile options",
+      "6063, 6061 & 6082 alloy grades",
+      "Mill finish, anodized & powder coated",
+      "IS 733 & ASTM B221 certified",
+      "Ideal for construction & solar frames",
+      "Sourced from Hindalco, Jindal & premium extruders",
+    ],
+  },
 
 export function getProductBySlug(slug: string): ProductData | undefined {
   return products.find((p) => p.slug === slug);
