@@ -167,9 +167,9 @@ const Header = () => {
                         <h5 className="text-xs font-bold text-foreground/50 uppercase tracking-wider mb-2">{sub.title}</h5>
                         <ul className="space-y-1.5">
                           {sub.items.map((item) => (
-                            <li key={item}>
-                              <a href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                                {item}
+                            <li key={item.name}>
+                              <a href={item.link} className="text-sm text-muted-foreground hover:text-accent transition-colors">
+                                {item.name}
                               </a>
                             </li>
                           ))}
