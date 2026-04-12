@@ -7,31 +7,31 @@ import menuCopper from "@/assets/menu-copper.jpg";
 
 type MaterialKey = "Steel" | "Aluminium" | "Copper";
 
-const materialsMenu: Record<MaterialKey, { image: string; subcategories: { title: string; items: string[] }[] }> = {
+const materialsMenu: Record<MaterialKey, { image: string; subcategories: { title: string; items: { name: string; link: string }[] }[] }> = {
   Steel: {
     image: menuSteel,
     subcategories: [
-      { title: "Long Products", items: ["TMT Bars", "Round Bars", "Binding Wire"] },
-      { title: "Flat Products", items: ["HR Sheets & Plates", "CR Sheets", "Chequered Plates"] },
-      { title: "Structural Sections", items: ["MS Beam", "MS Channel", "MS Angle", "MS Flat"] },
-      { title: "Pipes & Tubes", items: ["Round Pipe", "Square Pipe", "Rectangular Pipe"] },
-      { title: "Coated Steel", items: ["GI Products", "Roofing Sheets"] },
+      { title: "Long Products", items: [{ name: "TMT Bars", link: "/product/tmt-bars" }, { name: "Round Bars", link: "/product/round-bars" }, { name: "Binding Wire", link: "/product/binding-wire" }] },
+      { title: "Flat Products", items: [{ name: "HR Coils", link: "/product/hr-coils" }, { name: "HR Sheets & Plates", link: "/product/hr-sheets-plates" }, { name: "CR Sheets", link: "/product/cr-sheets" }, { name: "Chequered Plates", link: "/product/chequered-plates" }] },
+      { title: "Structural Sections", items: [{ name: "MS Beam", link: "/product/ms-beam" }, { name: "MS Channel", link: "/product/ms-channel" }, { name: "MS Angle", link: "/product/ms-angle" }, { name: "MS Flat", link: "/product/ms-flat" }] },
+      { title: "Pipes & Tubes", items: [{ name: "Round Pipe", link: "/product/round-pipe" }, { name: "Square Pipe", link: "/product/square-pipe" }, { name: "Rectangular Pipe", link: "/product/rectangular-pipe" }] },
+      { title: "Coated Steel", items: [{ name: "GI Products", link: "/product/gi-products" }, { name: "Roofing Sheets", link: "/product/roofing-sheets" }] },
     ],
   },
   Aluminium: {
     image: menuAluminium,
     subcategories: [
-      { title: "Primary Products", items: ["Aluminium Ingots", "Aluminium Billets"] },
-      { title: "Flat Products", items: ["Aluminium Sheets", "Aluminium Coils", "Aluminium Foil"] },
-      { title: "Extrusions", items: ["Aluminium Extrusions", "Aluminium Profiles", "Aluminium Channels"] },
+      { title: "Primary Products", items: [{ name: "Aluminium Ingots", link: "/product/aluminium-ingots" }] },
+      { title: "Flat Rolled Products", items: [{ name: "Aluminium Coils", link: "/product/aluminium-coils" }, { name: "Aluminium Sheets", link: "/product/aluminium-sheets" }] },
+      { title: "Extruded Products", items: [{ name: "Aluminium Extrusions", link: "/product/aluminium-extrusions" }] },
     ],
   },
   Copper: {
     image: menuCopper,
     subcategories: [
-      { title: "Primary Products", items: ["Copper Cathodes", "Copper Ingots"] },
-      { title: "Semi-Finished", items: ["Copper Rods", "Copper Wires", "Copper Tubes"] },
-      { title: "Finished Products", items: ["Copper Strips", "Copper Busbars"] },
+      { title: "Primary Products", items: [{ name: "Copper Cathodes", link: "/product/copper-cathodes" }] },
+      { title: "Semi-Finished", items: [{ name: "Copper Rods", link: "/product/copper-cathodes" }, { name: "Copper Wires", link: "/product/copper-cathodes" }, { name: "Copper Tubes", link: "/product/copper-cathodes" }] },
+      { title: "Finished Products", items: [{ name: "Copper Strips", link: "/product/copper-cathodes" }, { name: "Copper Busbars", link: "/product/copper-cathodes" }] },
     ],
   },
 };
@@ -167,9 +167,9 @@ const Header = () => {
                         <h5 className="text-xs font-bold text-foreground/50 uppercase tracking-wider mb-2">{sub.title}</h5>
                         <ul className="space-y-1.5">
                           {sub.items.map((item) => (
-                            <li key={item}>
-                              <a href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                                {item}
+                            <li key={item.name}>
+                              <a href={item.link} className="text-sm text-muted-foreground hover:text-accent transition-colors">
+                                {item.name}
                               </a>
                             </li>
                           ))}
