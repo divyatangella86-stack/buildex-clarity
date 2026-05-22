@@ -24,6 +24,7 @@ import networkImg from "@/assets/about-network.jpg";
 import steelImg from "@/assets/about-steel.jpg";
 import aluminiumImg from "@/assets/about-aluminium.jpg";
 import copperImg from "@/assets/about-copper.jpg";
+import freshexImg from "@/assets/about-heyfreshex.jpg";
 
 const materials = [
   {
