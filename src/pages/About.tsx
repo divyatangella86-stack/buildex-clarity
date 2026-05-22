@@ -24,6 +24,7 @@ import networkImg from "@/assets/about-network.jpg";
 import steelImg from "@/assets/about-steel.jpg";
 import aluminiumImg from "@/assets/about-aluminium.jpg";
 import copperImg from "@/assets/about-copper.jpg";
+import freshexImg from "@/assets/about-heyfreshex.jpg";
 
 const materials = [
   {
@@ -265,6 +266,46 @@ const About = () => (
             </CardContent>
           </Card>
         ))}
+      </div>
+    </section>
+
+    {/* SISTER COMPANY - HEYFRESHEX */}
+    <section className="container-max px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative order-2 lg:order-1">
+          <img
+            src={freshexImg}
+            alt="HeyFreshEx - Agri & Aqua Global Supplier"
+            className="rounded-xl shadow-lg w-full object-cover aspect-video"
+            loading="lazy"
+            width={1280}
+            height={720}
+          />
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-primary/20 to-transparent" />
+        </div>
+        <div className="order-1 lg:order-2">
+          <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-3">Our Sister Company</span>
+          <h2 className="font-heading text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground mb-3">
+            Hey<span className="text-accent">FreshEx</span>
+          </h2>
+          <p className="text-base font-semibold text-foreground/80 mb-5">
+            Trusted Global Supplier of Agri &amp; Aqua Products
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5">
+            We supply high-quality agricultural and aquaculture products to global buyers, ensuring consistent quality and reliable delivery across international markets.
+          </p>
+          <div className="border-l-4 border-accent pl-4 mb-6">
+            <h3 className="font-heading font-bold text-foreground mb-2">Reliable Global Supply Network</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              FreshEx ensures dependable sourcing through a strong supply network and efficient global logistics, delivering products that meet international quality expectations.
+            </p>
+          </div>
+          <Button variant="outline" asChild>
+            <a href="https://heyfreshex.com" target="_blank" rel="noopener noreferrer">
+              Visit HeyFreshEx <ArrowRight className="h-4 w-4 ml-1" />
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
 
