@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, BarChart3, FileText, Newspaper, BookOpen, ArrowRight } from "lucide-react";
+import { TrendingUp, BarChart3, FileText, Newspaper, BookOpen, ArrowRight, Calculator } from "lucide-react";
 
 const sections = [
   {
@@ -99,6 +99,26 @@ const MarketInsightsHub = () => (
             </div>
           );
         })}
+      </div>
+    </section>
+
+    {/* Tools */}
+    <section className="pb-16 lg:pb-24">
+      <div className="container-max px-4 sm:px-6 lg:px-8">
+        <div className="bg-card rounded-2xl border border-border shadow-card p-6 lg:p-10 flex flex-col lg:flex-row items-center gap-6">
+          <div className="w-20 h-20 rounded-2xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+            <Calculator className="h-10 w-10" />
+          </div>
+          <div className="flex-1 text-center lg:text-left">
+            <h3 className="font-heading text-2xl font-extrabold text-foreground mb-1">TMT Weight Calculator</h3>
+            <p className="text-muted-foreground">Estimate the weight of TMT steel bars instantly as per IS 1786. Build a material list and plan procurement.</p>
+          </div>
+          <Link to="/tools/tmt-weight-calculator">
+            <Button variant="accent" className="group">
+              Open Calculator <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
 
